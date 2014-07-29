@@ -1,0 +1,22 @@
+'.source.shell':
+  '#!/usr/bin/env bats':
+    'prefix': 'bats'
+    'body': '#!/usr/bin/env bats\n'
+  'func':
+    'prefix': 'func'
+    'body':   '${1:name}() {\n\t${0:#statement}\n}'
+  'test':
+    'prefix': 'test'
+    'body':   '@test "${1:name}" {\n\t${0:#statement}\n}'
+  'init':
+    'prefix': 'init'
+    'body':   'setup() {\n\t${1:#setup before each}\n}\n\nteardown() {\n\t${2:#teardown after each}\n}\n\n${0}'
+  'run':
+    'prefix': 'run'
+    'body':   'run ${1:command} ${2:args}${0}'
+  'load':
+    'prefix': 'load'
+    'body':   'load ${1:file}\n${0}'
+  'skip':
+    'prefix': 'skip'
+    'body':   'skip'
