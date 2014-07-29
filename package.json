@@ -1,13 +1,12 @@
 {
   "name": "language-bats",
   "main": "./lib/language-bats",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Grammar for the Bash Automated Test System (BATS)",
   "repository": "https://github.com/jkamenik/language-bats",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
